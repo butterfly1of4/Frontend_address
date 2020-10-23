@@ -1,6 +1,14 @@
-[
+[   {"model": "user.User",
+    "pk": 5,
+    "fields": {
+        "username": "butterfly1of4",
+        "user_email":"jhouck29@gmail.com",
+        "password": "address"
+    }
+    },
+    
     {
-        "model": "address.Frontend",
+        "model": "address.Address",
         "pk": 1,
         "fields": {
             "first_name":"Judy",
@@ -15,7 +23,7 @@
         }
     },
     {
-        "model": "address.Frontend",
+        "model": "address.Address",
         "pk": 2,
         "fields": {
             "first_name":"Lee",
@@ -45,7 +53,7 @@
         }
     },
     {
-        "model": "address.Frontend",
+        "model": "address.Address",
         "pk": 4,
         "fields": {
             "first_name":"Arthur",
