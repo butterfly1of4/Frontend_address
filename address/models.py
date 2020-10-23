@@ -3,7 +3,8 @@ from django.db import models
 
 class User(models.Model):
     username = models.CharField(max_length=200, default='username')
-    password = models.Charfield(max_length=300, default='password')
+    user_email = models.CharField(max_length=400, default='email')
+    password = models.CharField(max_length=300, default='password')
     
     def __str__(self):
         return self.first_name
@@ -13,16 +14,16 @@ class User(models.Model):
 # # NEW MODEL
 class Contact(models.Model):
     # On original python_cli database list  
-    first_name  = models.CharField(max_length=200)
-    last_name = models.CharField(max_length=200)
-    phone_number =  models.ForeignKey(User, on_delete=models.CASCADE, related_name='number', default='phone')
-    email = models.TextField(default='email')
+    firstName  = models.CharField(max_length=200)
+    lastName = models.CharField(max_length=200)
+    phone =  models.ForeignKey(User, on_delete=models.CASCADE, related_name='number', default='phone')
+    contact_email = models.CharField(max_length=400, default='email')
     
     # adding to cli list 
-    address = models.TextField( default='address')
+    address = models.CharField(max_length=500,  default='address')
     relation = models.CharField(max_length=200, default='relation')
     group = models.CharField(max_length=500, default='group')
-    age = models.IntegerField(default='age')
+    age = models.IntegerField(max_length= 100, default='age')
     notes = models.TextField( default='notes')
     
     def __str__(self):
