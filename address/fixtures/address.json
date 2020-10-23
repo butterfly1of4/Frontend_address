@@ -1,0 +1,68 @@
+[
+    {
+        "model": "address.Frontend",
+        "pk": 1,
+        "fields": {
+            "first_name":"Judy",
+            "last_name": "Houck",
+            "phone_number": "301-444-5555",
+            "email": "judythouck@gmail.com",
+            "address": "4186 Palomino ln, Middletown, MD 21769",
+            "relation": "Mother",
+            "group": "Family",
+            "age": "69",
+            "notes": "This is my mother!"
+        }
+    },
+    {
+        "model": "address.Frontend",
+        "pk": 2,
+        "fields": {
+            "first_name":"Lee",
+            "last_name": "Houck",
+            "phone_number": "301-555-6666",
+            "email": "lee@gmail.com",
+            "address": "4186 Palomino ln, Middletown, MD 21769",
+            "relation": "Father",
+            "group": "Family",
+            "age": "72",
+            "notes": "This is Dad!"
+        }
+    },
+    {
+        "model": "address.Address",
+        "pk": 3,
+        "fields": {
+            "first_name":"Aimee",
+            "last_name": "Houck",
+            "phone_number": "301-555-2222",
+            "email": "aimee@gmail.com",
+            "address": "567 Grant st, Chicago, IL  534543",
+            "relation": "Sister",
+            "group": "Family",
+            "age": "32",
+            "notes": "This is my sister!"
+        }
+    },
+    {
+        "model": "address.Frontend",
+        "pk": 4,
+        "fields": {
+            "first_name":"Arthur",
+            "last_name": "Shmidt",
+            "phone_number": "240-888-5454",
+            "email": "arthur@gmail.com",
+            "address": "706 Azalea dr. Rockville, MD 20850",
+            "relation": "Fiancee",
+            "group": "Family",
+            "age": "37",
+            "notes": "This is who I'm marrying!"
+        }
+    }
+]
+
+
+
+
+
+
