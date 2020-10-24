@@ -13,7 +13,7 @@ class User(models.Model):
 # # NEW MODEL
 class Contact(models.Model):
     contactEmail = models.CharField(max_length=300, default='contactemail', unique=True)
-    owner = models.CharField(User, max_length=200, default="owner")
+    # owner = models.ForeignKey(User, on_delete=models.CASCADE, related_name='owner', default="butterfly1of4")
     firstName = models.CharField(max_length=200, default="first")
     lastName = models.CharField(max_length=300, default="last")
     phone_number = PhoneNumberField(default=int())
@@ -25,6 +25,16 @@ class Contact(models.Model):
 
     def __str__(self):
         return self.contactEmail
+    
+    
+    # def get_absolute_url(self):
+    #     return(reverse('contact_detail', kwargs={'pk': self.pk}))
+    
+    
+    
+    
+    
+    
     # On original python_cli database list
 
         # FROM CLI MODEL
