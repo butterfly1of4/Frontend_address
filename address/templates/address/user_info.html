@@ -1,0 +1,12 @@
+<h2>{{ user.userEmail}}<a href="">(edit)</a></h2>
+<h4>{{user.password}}</h4>
+
+
+<h3>Contacts <a href="">(+)</a></h3>
+<ul>
+    {% for contact in user.contacts.all %}
+    <li>
+        <a href="">{{contact.firstName}}, {{contact.lastName}} </a>
+    </li>
+    {% endfor %}
+</ul>

@@ -2,9 +2,10 @@ from django.db import models
 from phonenumber_field.modelfields import PhoneNumberField
 
 class User(models.Model):
-    userName = models.CharField(max_length=200, default='useremail', unique=True)
-    userEmail = models.CharField(max_length=400, default='email')
-    password = models.CharField(max_length=300, default='password')
+    userName = models.CharField(max_length=200, default="username")
+    userEmail = models.CharField(max_length=400, default="email")
+    password = models.CharField(max_length=300, default="password")
+
 
     def __str__(self):
         return self.userName
@@ -12,15 +13,15 @@ class User(models.Model):
 
 # # NEW MODEL
 class Contact(models.Model):
-    contactEmail = models.CharField(max_length=300, default='contactemail', unique=True)
-    # owner = models.ForeignKey(User, on_delete=models.CASCADE, related_name='owner', default="butterfly1of4")
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="user", default="user")
+    contactEmail = models.CharField(max_length=300, default='contactemail')
     firstName = models.CharField(max_length=200, default="first")
     lastName = models.CharField(max_length=300, default="last")
     phone_number = PhoneNumberField(default=int())
     contactAddress = models.TextField(default="address")
     relation = models.CharField(max_length = 200, default="relation")
     group = models.CharField(max_length=300, default="group")
-    age = models.CharField(max_length=5, default='age')
+    age = models.CharField(max_length=5, default="age")
     notes= models.TextField(default="notes")
 
     def __str__(self):

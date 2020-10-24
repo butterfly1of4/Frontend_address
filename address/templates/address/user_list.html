@@ -1,8 +1,10 @@
-<h2>Users <a href=""> (+)</a></h2>
+<h2>Users <a href=">" (+)</a></h2>
 
-<!-- LIST OF USERS IN USERS -->
+<!-- LIST OF USERS IN USER -->
 <ul>
+
     <li>
-        <a href="">{{user.username}}></a>
+        <a href="{% url 'user_info' pk=user.pk % }">{{user.username}}</a>
     </li>
+
 </ul>

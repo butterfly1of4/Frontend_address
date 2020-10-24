@@ -1,15 +1,22 @@
 [  {"model": "address.User",
   
     "fields": {
-        "userName": "helllo",
-        "userEmail":"jhouck29@gmail.com",
-        "password": "address"
-    }}
+        "userName": "goodbyee",
+        "userEmail":"helpMe@gmail.com",
+        "password": "helpMe"
+    }},
+    {"model": "address.User",
+  
+        "fields": {
+            "userName": "hellooo",
+            "userEmail":"jhouck29@gmail.com",
+            "password": "address"
+        }}
     ,{     
         "model": "address.Contact",
         "fields": {
+            "user": 0,
             "contactEmail": "judythouck@gmail.com",
-
             "firstName":"Judy",
             "lastName": "Houck",
             "phone_number": "3014445555",
@@ -24,6 +31,7 @@
     "model": "address.Contact",
 
     "fields": {
+        "user": 1,
         "contactEmail": "lee@gmail.com",
         "firstName":"Lee",
         "lastName": "Houck",
@@ -33,37 +41,6 @@
         "group": "Family",
         "age": "72",
         "notes": "This is Dad!"
-    }
-},
-{
-    "model": "address.Contact",
-
-    "fields": {
-        "contactEmail": "aimee@gmail.com",
-        "firstName":"Aimee",
-        "lastName": "Houck",
-        "phone_number": "3015552222",
-        "contactAddress": "567 Grant st, Chicago, IL  534543",
-        "relation": "Sister",
-        "group": "Family",
-        "age": "32",
-        "notes": "This is my sister!"
-    }
-},
-{
-    "model": "address.Contact",
-
- 
-    "fields": {
-        "contactEmail": "arthur@gmail.com",
-        "firstName":"Arthur",
-        "lastName": "Shmidt",
-        "phone_number": "2408885454",
-        "contactAddress": "706 Azalea dr. Rockville, MD 20850",
-        "relation": "Fiancee",
-        "group": "Family",
-        "age": "37",
-        "notes": "This is who I'm marrying!"
     }
 }
 ]
