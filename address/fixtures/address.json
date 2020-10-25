@@ -15,7 +15,7 @@
     ,{     
         "model": "address.Contact",
         "fields": {
-            "user": 0,
+            "id": 1,
             "contactEmail": "judythouck@gmail.com",
             "firstName":"Judy",
             "lastName": "Houck",
@@ -31,7 +31,7 @@
     "model": "address.Contact",
 
     "fields": {
-        "user": 1,
+        "id": 2,
         "contactEmail": "lee@gmail.com",
         "firstName":"Lee",
         "lastName": "Houck",

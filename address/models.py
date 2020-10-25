@@ -13,7 +13,7 @@ class User(models.Model):
 
 # # NEW MODEL
 class Contact(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="user", default="user")
+    # user = models.ForeignKey(User,primary_key=True, on_delete=models.CASCADE, related_name="users", default=int())
     contactEmail = models.CharField(max_length=300, default='contactemail')
     firstName = models.CharField(max_length=200, default="first")
     lastName = models.CharField(max_length=300, default="last")
