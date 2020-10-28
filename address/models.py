@@ -2,9 +2,9 @@ from django.db import models
 from phonenumber_field.modelfields import PhoneNumberField
 
 class User(models.Model):
-    userName = models.CharField(max_length=200, default="username")
-    userEmail = models.CharField(max_length=400, default="email")
-    password = models.CharField(max_length=300, default="password")
+    user_name = models.CharField(max_length=200, default="username", unique=True)
+    user_email = models.CharField(max_length=400, default="email")
+    user_password = models.CharField(max_length=300, default="password")
 
 
     def __str__(self):
@@ -13,23 +13,24 @@ class User(models.Model):
 
 # # NEW MODEL
 class Contact(models.Model):
-    # user = models.ForeignKey(User,primary_key=True, on_delete=models.CASCADE, related_name="users", default=int())
-    contactEmail = models.CharField(max_length=300, default='contactemail')
-    firstName = models.CharField(max_length=200, default="first")
-    lastName = models.CharField(max_length=300, default="last")
-    phone_number = PhoneNumberField(default=int())
-    contactAddress = models.TextField(default="address")
-    relation = models.CharField(max_length = 200, default="relation")
-    group = models.CharField(max_length=300, default="group")
-    age = models.CharField(max_length=5, default="age")
-    notes= models.TextField(default="notes")
+    contact_user=models.ManyToManyField(User)
+    contact_email = models.CharField(max_length=300, default='contactemail', unique=True)
+    contact_firstName = models.CharField(max_length=200, default="first")
+    contact_lastName = models.CharField(max_length=300, default="last")
+    contact_phoneNumber = PhoneNumberField(default=int())
+    contact_address = models.TextField(default="address")
+    contact_relation = models.CharField(max_length = 200, default="relation")
+    contact_group = models.CharField(max_length=300, default="group")
+    contact_age = models.CharField(max_length=5, default="age")
+    contact_notes= models.TextField(default="notes")
+    # user_id = models.ForeignKey(User, on_delete=models.CASCADE, related_name="user")
 
     def __str__(self):
-        return self.contactEmail
+        return self.contact_email
     
     
     # def get_absolute_url(self):
-    #     return(reverse('contact_detail', kwargs={'pk': self.pk}))
+    #     return(reverse('contact_info', kwargs={'pk': self.pk}))
     
     
     

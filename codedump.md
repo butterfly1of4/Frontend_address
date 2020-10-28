@@ -20,8 +20,8 @@
     ,{     
         "model": "address.Contact",
         "fields": {
-            "user": "",
-            "contactEmail": "judythouck@gmail.com",
+     "id
+: 3            "contactEmail": "judythouck@gmail.com",
             "firstName":"Judy",
             "lastName": "Houck",
             "phone_number": "3014445555",
@@ -36,8 +36,8 @@
     "model": "address.Contact",
 
     "fields": {
-        "user": "",
-        "contactEmail": "lee@gmail.com",
+ "id
+: 3        "contactEmail": "lee@gmail.com",
         "firstName":"Lee",
         "lastName": "Houck",
         "phone_number": "3015556666",
@@ -52,8 +52,8 @@
     "model": "address.Contact",
 
     "fields": {
-        "user": "",
-        "contactEmail": "aimee@gmail.com",
+         "id: 3        
+         "contactEmail": "aimee@gmail.com",
         "firstName":"Aimee",
         "lastName": "Houck",
         "phone_number": "3015552222",
@@ -69,8 +69,8 @@
 
  
     "fields": {
-        "user": "",
-        "contactEmail": "arthur@gmail.com",
+ "id
+: 4       "contactEmail": "arthur@gmail.com",
         "firstName":"Arthur",
         "lastName": "Shmidt",
         "phone_number": "2408885454",

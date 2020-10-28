@@ -1,8 +1,10 @@
-<!-- <h2>Contacts <a href=""> (+)</a></h2>
+<h2>Contacts <a href=""> (+)</a></h2>
 
 <!-- LIST OF CONTACTS IN contact -->
-<!-- <ul>
+<ul>
+    {% for contact in contacts%}
     <li>
-        <a href="{% url 'contact_info' pk=user.pk %}">{{contact.user}}</a>
-    </li> 
-</ul> -->
+        <a href="">{{contact.contactEmail}}</a>
+    </li>
+    {% endfor %}
+</ul>

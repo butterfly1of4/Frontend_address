@@ -1,46 +1,92 @@
 [  {"model": "address.User",
-  
+    "pk": 1,
     "fields": {
-        "userName": "goodbyee",
-        "userEmail":"helpMe@gmail.com",
-        "password": "helpMe"
+        "user_name": "goodbyee",
+        "user_email":"helpMe@gmail.com",
+        "user_password": "helpMe"
+   
     }},
     {"model": "address.User",
-  
-        "fields": {
-            "userName": "hellooo",
-            "userEmail":"jhouck29@gmail.com",
-            "password": "address"
+    "pk": 2,
+    "fields": {
+            "user_name": "hellooo",
+            "user_email":"jhouck29@gmail.com",
+            "user_password": "address"
         }}
     ,{     
         "model": "address.Contact",
+        "pk": 1,
         "fields": {
-            "id": 1,
-            "contactEmail": "judythouck@gmail.com",
-            "firstName":"Judy",
-            "lastName": "Houck",
-            "phone_number": "3014445555",
-            "contactAddress": "4186 Palomino ln, Middletown, MD 21769",
-            "relation": "Mother",
-            "group": "Family",
-            "age": "69",
-            "notes": "This is my mother!"
+
+            "contact_email": "judythouck@gmail.com",
+            "contact_firstName":"Judy",
+            "contact_lastName": "Houck",
+            "contact_phoneNumber": "+13014445555",
+            "contact_address": "4186 Palomino ln, Middletown, MD 21769",
+            "contact_relation": "Mother",
+            "contact_group": "Family",
+            "contact_age": "69",
+            "contact_notes": "This is my mother!",
+            "contact_user": [1]
+   
     }
 },
 {
     "model": "address.Contact",
 
+    "pk": 2,
     "fields": {
-        "id": 2,
-        "contactEmail": "lee@gmail.com",
-        "firstName":"Lee",
-        "lastName": "Houck",
-        "phone_number": "3015556666",
-        "contactAddress": "4186 Palomino ln, Middletown, MD 21769",
-        "relation": "Father",
-        "group": "Family",
-        "age": "72",
-        "notes": "This is Dad!"
+
+        "contact_email": "lee@gmail.com",
+        "contact_firstName":"Lee",
+        "contact_lastName": "Houck",
+        "contact_phoneNumber": "+13015556666",
+        "contact_address": "4186 Palomino ln, Middletown, MD 21769",
+        "contact_relation": "Father",
+        "contact_group": "Family",
+        "contact_age": "72",
+        "contact_notes": "This is Dad!",
+        "contact_user": [1]
+       
+    }
+},
+{
+    "model": "address.Contact",
+
+    "pk": 3,
+    "fields": {
+         "contact_email": "aimee@gmail.com",
+        "contact_firstName":"Aimee",
+        "contact_lastName": "Houck",
+        "contact_phoneNumber": "+13015552222",
+        "contact_address": "567 Grant st, Chicago, IL  534543",
+        "contact_relation": "Sister",
+        "contact_group": "Family",
+        "contact_age": "32",
+        "contact_notes": "This is my sister!",
+        "contact_user": [2]
+
+   
+    }
+},
+{
+    "model": "address.Contact",
+
+ 
+    "pk": 4,
+    "fields": {
+        "contact_email": "arthur@gmail.com",
+        "contact_firstName":"Arthur",
+        "contact_lastName": "Shmidt",
+        "contact_phoneNumber": "+12408885454",
+        "contact_address": "706 Azalea dr. Rockville, MD 20850",
+        "contact_relation": "Fiancee",
+        "contact_group": "Family",
+        "contact_age": "37",
+        "contact_notes": "This is who I'm marrying!",
+        "contact_user": [2]
+
+        
     }
 }
 ]
