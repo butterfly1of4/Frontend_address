@@ -4,18 +4,21 @@ from .models import User, Contact
 
 
 #USER LIST
+#GET ALL
 def user_list(request):
     users= User.objects.all()
     return render(request, 'address/user_list.html', {'users': users})
-
+#GET ONE
 def user_info(request,pk):
     user = User.objects.get(id=pk)
     return render(request, 'address/user_info.html', {'user':user})
 # #CONTACT LIST
+#GET ALL
 def contact_list(request):
     contacts = Contact.objects.all()
     return render(request, 'address/contact_list.html', {'contacts': contacts})
 
+#GET ONE
 def contact_info(request,pk):
     contact =  Contact.objects.get(id=pk)
     return render(request, 'address/contact_info.html', {'contact': contact})
