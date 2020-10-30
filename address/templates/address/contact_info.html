@@ -1,15 +1,25 @@
-<h2>{{contact.lastName}}, {{contact.fistName}}<a href="">(edit)</a></h2>
+<h2>{{contact.contact_last_name}}, {{contact.contact_first_name}}<a href="">(edit)</a></h2>
+
 <!-- ONE CONTACT INFORMATION -->
-<h3>Information: {{contact.user.user}}</h3>
-    Last Name: {{ contact.user.lasttName}} 
-    First Name: {{contact.user.firstName}}
-    Email Address: {{contact.user.contactEmail}}
-    Phone Number: {{contact.user.phone_number}}
-    Address: {{ contact.user.åcontactAddress}}
-    Relation: {{contact.user.relation}}
-    Group: {{contact.user.group}}
-    Age: {{contact.user.age}}
-    Notes: {{contact.user.notes}}
 
-
+<h3>Information: </h3>
+<div>
+    Last Name: {{contact.contact_last_name}} 
+<br />
+    First Name: {{contact_first_name}}
+<br />
+    Email Address: {{contact.contact_email}}
+<br />
+    Phone Number: {{contact.phone_number}}
+<br />
+    Address: {{ contact.contact_address}}
+<br />
+    Relation: {{contact.contact_relation}}
+<br />
+    Group: {{contact.contact_group}}
+<br />
+    Age: {{contact.contact_age}}
+<br />
+    Notes: {{contact.contact_notes}}
+</div>
 

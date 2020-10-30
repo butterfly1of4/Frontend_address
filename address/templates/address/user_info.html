@@ -1,12 +1,14 @@
-<h2>{{ user.userEmail}}<a href="">(edit)</a></h2>
-<h4>{{user.password}}</h4>
+<h2>{{user.user_name}}</h2>
+<h4>{{ user.user_email}}<a href="">(edit)</a></h4>
+<h4>{{user.user_password}}</h4>
+
 
 <!-- ONE USER IN USERS -->
 <h3>Contacts <a href="">(+)</a></h3>
 <ul>
     {% for contact in user.contacts.all %}
     <li>
-        <a href="">{{contact.firstName}}, {{contact.lastName}} </a>
+        <a href="{% url 'contact_info' pk=user.pk % }">{{contact.first_name}}, {{contact.last_name}} </a>
     </li>
     {% endfor %}
 </ul>

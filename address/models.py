@@ -13,17 +13,18 @@ class User(models.Model):
 
 # # NEW MODEL
 class Contact(models.Model):
-    contact_user=models.ManyToManyField(User)
+    # contact_user=models.ManyToManyField(User)
+    contact_user = models.ForeignKey(User, on_delete=models.CASCADE)
     contact_email = models.CharField(max_length=300, default='contactemail', unique=True)
-    contact_firstName = models.CharField(max_length=200, default="first")
-    contact_lastName = models.CharField(max_length=300, default="last")
-    contact_phoneNumber = PhoneNumberField(default=int())
-    contact_address = models.TextField(default="address")
+    contact_first_name = models.CharField(max_length=200, default="first")
+    contact_last_name = models.CharField(max_length=300, default="last")
+    contact_phone_number = PhoneNumberField(default=int())
+    contact_home_address = models.TextField(default="address")
     contact_relation = models.CharField(max_length = 200, default="relation")
     contact_group = models.CharField(max_length=300, default="group")
-    contact_age = models.CharField(max_length=5, default="age")
+    contact_age = models.IntegerField(default=int())
     contact_notes= models.TextField(default="notes")
-    # user_id = models.ForeignKey(User, on_delete=models.CASCADE, related_name="user")
+
 
     def __str__(self):
         return self.contact_email

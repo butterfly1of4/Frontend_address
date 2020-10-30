@@ -4,7 +4,8 @@
 <ul>
     {% for contact in contacts%}
     <li>
-        <a href="">{{contact.contact_email}}</a>
+        <a href="{% url 'contact_info' pk=contact.pk %}"></br />{{contact.contact_last_name}}, {{contact.contact_first_name}} </br /> 
+        {{contact.contact_email}}</br /></a>
     </li>
     {% endfor %}
 </ul>

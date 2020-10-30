@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'address',
-    'django_extensions',
+    # 'AIzaSyD--your-google-maps-key-SjQBE',
     'phonenumber_field'
 ]
 

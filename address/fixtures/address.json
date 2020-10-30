@@ -19,15 +19,15 @@
         "fields": {
 
             "contact_email": "judythouck@gmail.com",
-            "contact_firstName":"Judy",
-            "contact_lastName": "Houck",
-            "contact_phoneNumber": "+13014445555",
-            "contact_address": "4186 Palomino ln, Middletown, MD 21769",
+            "contact_first_name":"Judy",
+            "contact_last_name": "Houck",
+            "contact_phone_number": "+13014445555",
+            "contact_home_address": "4186 Palomino ln, Middletown, MD 21769",
             "contact_relation": "Mother",
             "contact_group": "Family",
             "contact_age": "69",
             "contact_notes": "This is my mother!",
-            "contact_user": [1]
+            "contact_user": 2
    
     }
 },
@@ -38,15 +38,15 @@
     "fields": {
 
         "contact_email": "lee@gmail.com",
-        "contact_firstName":"Lee",
-        "contact_lastName": "Houck",
-        "contact_phoneNumber": "+13015556666",
-        "contact_address": "4186 Palomino ln, Middletown, MD 21769",
+        "contact_first_name":"Lee",
+        "contact_last_name": "Houck",
+        "contact_phone_number": "+13015556666",
+        "contact_home_address": "4186 Palomino ln, Middletown, MD 21769",
         "contact_relation": "Father",
         "contact_group": "Family",
         "contact_age": "72",
         "contact_notes": "This is Dad!",
-        "contact_user": [1]
+        "contact_user": 1
        
     }
 },
@@ -56,35 +56,34 @@
     "pk": 3,
     "fields": {
          "contact_email": "aimee@gmail.com",
-        "contact_firstName":"Aimee",
-        "contact_lastName": "Houck",
-        "contact_phoneNumber": "+13015552222",
-        "contact_address": "567 Grant st, Chicago, IL  534543",
+        "contact_first_name":"Aimee",
+        "contact_last_name": "Houck",
+        "contact_phone_number": "+13015552222",
+        "contact_home_address": "567 Grant st, Chicago, IL  534543",
         "contact_relation": "Sister",
         "contact_group": "Family",
         "contact_age": "32",
         "contact_notes": "This is my sister!",
-        "contact_user": [2]
+        "contact_user": 1
 
    
     }
 },
 {
     "model": "address.Contact",
-
  
     "pk": 4,
     "fields": {
         "contact_email": "arthur@gmail.com",
-        "contact_firstName":"Arthur",
-        "contact_lastName": "Shmidt",
-        "contact_phoneNumber": "+12408885454",
-        "contact_address": "706 Azalea dr. Rockville, MD 20850",
+        "contact_first_name":"Arthur",
+        "contact_last_name": "Shmidt",
+        "contact_phone_number": "+12408885454",
+        "contact_home_address": "706 Azalea dr. Rockville, MD 20850",
         "contact_relation": "Fiancee",
         "contact_group": "Family",
         "contact_age": "37",
         "contact_notes": "This is who I'm marrying!",
-        "contact_user": [2]
+        "contact_user": 2
 
         
     }
