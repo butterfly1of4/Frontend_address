@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'address',
     # 'AIzaSyD--your-google-maps-key-SjQBE',
-    'phonenumber_field'
+    'phone_field'
 ]
 
 MIDDLEWARE = [

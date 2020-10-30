@@ -3,12 +3,9 @@
 
 <h1>New User</h1>
 <form method="POST" class="user-form">
-    {% crsf_token %} {{form.as_p}}
+    {% csrf_token %} 
+    {{form.as_p}}
     <button type="submit" class="save">Save</button>
 </form>
-
-
-
-
 
 {% endblock%}

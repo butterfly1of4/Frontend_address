@@ -1,6 +1,5 @@
-from django.shortcuts import render
-from .models import User, Contact
 from django.shortcuts import render, redirect
+from .models import User, Contact
 from .forms import UserForm, ContactForm
 
 
@@ -41,7 +40,7 @@ def contact_create(request):
             return  redirect('conact_info', pk=contact.pk)
     else:   
         form = ContactForm()
-    return render(redirect, 'address/contact_info.html', {'form': form})
+    return render(request, 'address/contact_info.html', {'form': form})
 
 # #CONTACT LIST
 #GET ALL

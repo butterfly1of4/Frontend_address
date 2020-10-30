@@ -1,5 +1,5 @@
 from django.db import models
-from phonenumber_field.modelfields import PhoneNumberField
+from phone_field import PhoneField
 
 class User(models.Model):
     user_name = models.CharField(max_length=200, default="username", unique=True)
@@ -14,11 +14,11 @@ class User(models.Model):
 # # NEW MODEL
 class Contact(models.Model):
     # contact_user=models.ManyToManyField(User)
-    contact_user = models.ForeignKey(User, on_delete=models.CASCADE)
+    contact_user = models.ForeignKey(User, on_delete=models.CASCADE, default='user')
     contact_email = models.CharField(max_length=300, default='contactemail', unique=True)
     contact_first_name = models.CharField(max_length=200, default="first")
     contact_last_name = models.CharField(max_length=300, default="last")
-    contact_phone_number = PhoneNumberField(default=int())
+    contact_phone_number = PhoneField()
     contact_home_address = models.TextField(default="address")
     contact_relation = models.CharField(max_length = 200, default="relation")
     contact_group = models.CharField(max_length=300, default="group")
