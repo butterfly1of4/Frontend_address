@@ -1,8 +1,11 @@
 {% extends 'address/base.html' %}
 {% block content%}
 
-
-
+<h1>New Contact</h1>
+<form method="POST" class="contact-form">
+    {% csrf_token %}{{form.as_p}}
+    <button type="submit" class="save">Save</button>
+</form>
 
 
 

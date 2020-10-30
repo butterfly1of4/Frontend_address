@@ -1,6 +1,7 @@
 {%extends 'address/base.html'%} {% block content %}
-<h2>{{user.user_name}}</h2>
-<h4>{{ user.user_email}}<a href="">(edit)</a></h4>
+
+<h2>{{user.user_name}}<a href="{% url 'user_edit' pk=user.pk %}">(edit)</a></h2>
+<h4>{{user.user_email}}</h4>
 <h4>{{user.user_password}}</h4>
 
 
@@ -9,7 +10,7 @@
 <ul>
     {% for contact in user.contacts.all %}
     <li>
-        <a href="{% url 'contact_info' pk=user.pk % }">{{contact.first_name}}, {{contact.last_name}} </a>
+        <a href="{% url 'contact_info' pk=user.pk % }">{{contact.contact_first_name}}, {{contact.contact_last_name}} </a>
     </li>
     {% endfor %}
 </ul>
