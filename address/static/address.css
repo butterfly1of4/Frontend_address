@@ -1,0 +1,30 @@
+
+a,
+a:visited {
+  text-decoration: none;
+  color: blue;
+}
+
+a:hover {
+  background-color: #ccc;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  margin: 0.25em;
+}
+
+h1 {
+  font: inherit;
+  color: inherit;
+  letter-spacing: -0.05em;
+  text-decoration: none;
+  border-bottom: 1px solid black;
+}
+
+h2 > a {
+  font-size: 0.75em;
+}

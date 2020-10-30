@@ -1,0 +1,15 @@
+{% load static %}
+<html>
+    <head>
+        <title>Address Book</title>
+        <link rel="styelsheet" href="{% static 'css/address.css' %}" />
+    </head>
+    <body>
+        <h1>Address Book</h1>
+        <div>
+            <a href="/contacts">Contacts</a>
+            <a href="/users">Users</a> 
+        </div> 
+        {% block content%} {% endblock %}
+    </body>
+</html>

@@ -1,3 +1,4 @@
+{%extends 'address/base.html'%} {% block content %}
 <h2>{{contact.contact_last_name}}, {{contact.contact_first_name}}<a href="">(edit)</a></h2>
 
 <!-- ONE CONTACT INFORMATION -->
@@ -22,4 +23,4 @@
 <br />
     Notes: {{contact.contact_notes}}
 </div>
-
+{% endblock %}
