@@ -1,5 +1,5 @@
 {%extends 'address/base.html'%} {% block content %}
-<h2>Contacts <a href=""> (+)</a></h2>
+<h2>Contacts <a href="{% url 'contact_create' %}"> (+)</a></h2>
 
 <!-- LIST OF CONTACTS IN contact -->
 <ul>

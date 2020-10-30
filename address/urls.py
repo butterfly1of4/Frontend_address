@@ -7,9 +7,10 @@ urlpatterns = [
     # #USER URLS
     path('users/', views.user_list, name='user_list'),
     path('users/<int:pk>', views.user_info, name='user_info'),
-    
+    path('users/new', views.user_create, name='user_create'),
     
      # #CONTACT URLS
     path('contacts/', views.contact_list, name='contact_list'),
-    path('contacts/<int:pk>', views.contact_info, name='contact_info')
+    path('contacts/<int:pk>', views.contact_info, name='contact_info'),
+    path('contacts/new', views.contact_create, name="contact_create")
 ]
