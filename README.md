@@ -1,23 +1,25 @@
 # The test front end
 
-Requirements for build: Python, Django, Pipenv, postgreSQL
+## Requirements for build: Python, Django, Pipenv, postgreSQL
 
 Dependencies:
 pipenv
 django
 postgreSQL
 
-To install pipenv:
+### To install pipenv:
 `brew install pipenv`
-To install django:
+### To install django:
 `pipenv install django`
-To install the library connecting Django to SQL:
+**To install the library connecting Django to SQL:
 `pipenv install psycopg2-binary`
 **_NOTE: THE PERIOD AT THE END OF THE STRING MUST BE THERE TO WORK_**
-To initiate a new project:
+### To initiate a new project:
 `pipenv run django-admin startproject frontend_test .`
 `pipenv install django-extensions`
-Setup:
+
+
+## Setup:
 Get into the Django environment you created:
 `pipenv shell`
 Create app:
@@ -69,3 +71,11 @@ Create a superuser:
 
 To run the server:
 `python3 manage.py runserver`
+
+## After adding a 'templates' folder to the file holding the database (in this case 'address'):
+
+### Django REST framework 
+In the virtual director (pipenv shell) run:
+```pipenv install djangorestframework```
+and add to the INSTALLED_APPS section of the settings.py folder. 
+

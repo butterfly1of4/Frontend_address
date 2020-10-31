@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+#Google API key
+GOOGLE_API_KEY = 'AIzaSyD--your-google-maps-key-SjQBE'
 
 # Application definition
 
@@ -39,7 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'address',
     # 'AIzaSyD--your-google-maps-key-SjQBE',
-    'phone_field'
+    'phone_field',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
