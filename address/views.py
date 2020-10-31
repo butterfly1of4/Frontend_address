@@ -40,6 +40,11 @@ def user_info(request,pk):
     user = User.objects.get(id=pk)
     return render(request, 'address/user_info.html', {'user':user})
 
+#USER DELETE
+def user_delete(request,pk):
+    User.objects.get(id=pk).delete()
+    return redirect('user_list')
+
 
 #CONTACT VIEWS
 #CONTACT CREATE/POST
@@ -74,3 +79,8 @@ def contact_list(request):
 def contact_info(request,pk):
     contact =  Contact.objects.get(id=pk)
     return render(request, 'address/contact_info.html', {'contact': contact})
+
+#CONTACT DELETE
+def contact_delete(request,pk):
+    Contact.objects.get(id=pk).delete()
+    return redirect('contact_list')

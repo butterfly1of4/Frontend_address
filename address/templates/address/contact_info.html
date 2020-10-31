@@ -1,6 +1,6 @@
 {%extends 'address/base.html'%} {% block content %}
 <h2>{{contact.contact_last_name}}, {{contact.contact_first_name}}<a href="{% url 'contact_create' %}">(edit)</a></h2>
-
+<h3><a href="{% url 'contact_delete' pk=contact.pk %}">(delete)</a></h3>
 <!-- ONE CONTACT INFORMATION -->
 
 <h3>Contact Information: </h3>
