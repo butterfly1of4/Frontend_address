@@ -14,7 +14,7 @@ class User(models.Model):
 # # NEW MODEL
 class Contact(models.Model):
     # contact_user=models.ManyToManyField(User)
-    contact_user = models.ForeignKey(User, on_delete=models.CASCADE, default='user')
+    contact_user = models.ForeignKey(User, on_delete=models.CASCADE, default='user', related_name="contacts")
     contact_email = models.CharField(max_length=300, default='contactemail', unique=True)
     contact_first_name = models.CharField(max_length=200, default="first")
     contact_last_name = models.CharField(max_length=300, default="last")
@@ -30,8 +30,8 @@ class Contact(models.Model):
         return self.contact_email
     
     
-    # def get_absolute_url(self):
-    #     return(reverse('contact_info', kwargs={'pk': self.pk}))
+    def get_absolute_url(self):
+        return(reverse('contact_info', kwargs={'pk': self.pk}))
     
     
     

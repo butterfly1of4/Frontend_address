@@ -1,13 +1,26 @@
 from django.shortcuts import render, redirect
 from .models import User, Contact
 from .forms import UserForm, ContactForm
+from rest_framework import generics
+from .serializers import UserSerializer, ContactSerializer
 
 
 # Create your views here.
+#SERIALIZERS
+
+class UserList(generics.ListCreateAPIView):
+    queryset=User.objects.all()
+    serializer_class= UserSerializer
+
+class UserInfo(generics.RetrieveUpdateDestroyAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
 
 
-#USER VIEWS
-#USER CREATE/POST
+#################
+
+# #USER VIEWS
+# #USER CREATE/POST
 def user_create(request):
     if request.method == "POST":
         form = UserForm(request.POST)
@@ -32,13 +45,13 @@ def user_edit(request, pk):
             
 #USER LIST/GET
 #GET ALL
-def user_list(request):
-    users= User.objects.all()
-    return render(request, 'address/user_list.html', {'users': users})
-#GET ONE
-def user_info(request,pk):
-    user = User.objects.get(id=pk)
-    return render(request, 'address/user_info.html', {'user':user})
+# def user_list(request):
+#     users= User.objects.all()
+#     return render(request, 'address/user_list.html', {'users': users})
+# # #GET ONE
+# def user_info(request,pk):
+#     user = User.objects.get(id=pk)
+#     return render(request, 'address/user_info.html', {'user':user})
 
 #USER DELETE
 def user_delete(request,pk):

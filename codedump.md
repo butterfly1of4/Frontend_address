@@ -1,3 +1,120 @@
+***URLS.PY***
+from django.urls import path
+from . import views
+from rest_framework import views
+
+
+urlpatterns = [
+    #HOME URL
+    #path('', views.user_list, name="home")
+    
+    
+    # #USER URLS
+    path('users/', views.user_list, name='user_list'),
+    path('users/<int:pk>', views.user_info, name='user_info'),
+    path('users/new', views.user_create, name='user_create'),
+    path('users/<int:pk>/edit', views.user_edit, name='user_edit'),
+    path('users/<int:pk>/delete', views.user_delete, name='user_delete'),
+    
+    
+     # #CONTACT URLS
+    path('contacts/', views.contact_list, name='contact_list'),
+    path('contacts/<int:pk>', views.contact_info, name='contact_info'),
+    path('contacts/new', views.contact_create, name="contact_create"),
+    path('contacts/<int:pk>/edit', views.contact_edit, name='contact_edit'),
+    path('contacts/<int:pk>/delete', views.contact_delete, name="contact_delete")
+]
+
+
+
+
+
+
+
+
+***VIEWS***  
+
+#USER VIEWS
+#USER CREATE/POST
+def user_create(request):
+    if request.method == "POST":
+        form = UserForm(request.POST)
+        if form.is_valid():
+            user =  form.save()
+            return redirect('user_info', pk=user.pk)
+    else:
+        form = UserForm()
+    return render(request, 'address/user_form.html', {'form': form})
+ 
+#USER EDIT
+def user_edit(request, pk):
+    user= User.objects.get(pk=pk)
+    if request.method == "POST":
+        form = UserForm(request.POST, instance=user)
+        if form.is_valid():
+            user=form.save()
+            return redirect('user_info', pk=user.pk)
+    else:
+        form = UserForm(instance=user)
+    return render(request, 'address/user_form.html', {'form': form})
+            
+#USER LIST/GET
+#GET ALL
+def user_list(request):
+    users= User.objects.all()
+    return render(request, 'address/user_list.html', {'users': users})
+#GET ONE
+def user_info(request,pk):
+    user = User.objects.get(id=pk)
+    return render(request, 'address/user_info.html', {'user':user})
+
+#USER DELETE
+def user_delete(request,pk):
+    User.objects.get(id=pk).delete()
+    return redirect('user_list')
+
+
+#CONTACT VIEWS
+#CONTACT CREATE/POST
+def contact_create(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            contact = form.save()
+            return  redirect('conact_info', pk=contact.pk)
+    else:   
+        form = ContactForm()
+    return render(request, 'address/contact_form.html', {'form': form})
+
+#CONTACT EDIT
+def contact_edit(request,pk):
+    contact=Contact.objects.get(pk=pk)
+    if request.method == 'POST':
+        form=ContactForm(request.POST, instance=contact)
+        if form.is_valid():
+            contact=form.save()
+            return render(request, 'address/contact_form.html', {'form': form})
+    else:
+        form = ContactForm(instance=contact)
+    return render(request, 'address/contact_edit.html', {'form': form})
+# #CONTACT LIST
+#GET ALL
+def contact_list(request):
+    contacts = Contact.objects.all()
+    return render(request, 'address/contact_list.html', {'contacts': contacts})
+
+#GET ONE
+def contact_info(request,pk):
+    contact =  Contact.objects.get(id=pk)
+    return render(request, 'address/contact_info.html', {'contact': contact})
+
+#CONTACT DELETE
+def contact_delete(request,pk):
+    Contact.objects.get(id=pk).delete()
+    return redirect('contact_list')      
+       
+########################
+       
         "contact_home_address": "706 Azalea dr. Rockville, MD 20850",
 
         "contact_home_address": "567 Grant st, Chicago, IL  534543",
