@@ -79,4 +79,4 @@ In the virtual director (pipenv shell) run:
 ```pipenv install djangorestframework```
 and add to the INSTALLED_APPS section of the settings.py folder. 
 
-### CORS
+
