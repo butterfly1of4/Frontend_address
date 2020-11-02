@@ -16,7 +16,14 @@ class UserInfo(generics.RetrieveUpdateDestroyAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
 
+class ContactList(generics.ListCreateAPIView):
+    queryset=Contact.objects.all()
+    serializer_class = ContactSerializer
 
+class ContactInfo(generics.RetrieveUpdateDestroyAPIView):
+    queryset= Contact.objects.all()
+    serializer_class=ContactSerializer
+    
 #################
 
 # #USER VIEWS
@@ -84,14 +91,14 @@ def contact_edit(request,pk):
     return render(request, 'address/contact_edit.html', {'form': form})
 # #CONTACT LIST
 #GET ALL
-def contact_list(request):
-    contacts = Contact.objects.all()
-    return render(request, 'address/contact_list.html', {'contacts': contacts})
+# def contact_list(request):
+#     contacts = Contact.objects.all()
+#     return render(request, 'address/contact_list.html', {'contacts': contacts})
 
-#GET ONE
-def contact_info(request,pk):
-    contact =  Contact.objects.get(id=pk)
-    return render(request, 'address/contact_info.html', {'contact': contact})
+# #GET ONE
+# def contact_info(request,pk):
+#     contact =  Contact.objects.get(id=pk)
+#     return render(request, 'address/contact_info.html', {'contact': contact})
 
 #CONTACT DELETE
 def contact_delete(request,pk):

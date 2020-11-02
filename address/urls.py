@@ -19,10 +19,13 @@ urlpatterns = [
     path('users/<int:pk>/delete', views.user_delete, name='user_delete'),
     
     #CONTACTT SERIALIZER PATHS  
+    path('contacts/', views.ContactList.as_view(), name="contact_list"),
+    path('contacts/<int:pk>', views.ContactInfo.as_view(), name="contact_info"),
+    
     
      # #CONTACT URLS
-    path('contacts/', views.contact_list, name='contact_list'),
-    path('contacts/<int:pk>', views.contact_info, name='contact_info'),
+    # path('contacts/', views.contact_list, name='contact_list'),
+    # path('contacts/<int:pk>', views.contact_info, name='contact_info'),
     path('contacts/new', views.contact_create, name="contact_create"),
     path('contacts/<int:pk>/edit', views.contact_edit, name='contact_edit'),
     path('contacts/<int:pk>/delete', views.contact_delete, name="contact_delete")
