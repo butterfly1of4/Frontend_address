@@ -70,7 +70,7 @@ Create a superuser:
 ```python3 manage.py createsuperuser```
 
 To run the server:
-`python3 manage.py runserver`
+```python3 manage.py runserver```
 
 ## After adding a 'templates' folder to the file holding the database (in this case 'address'):
 
@@ -79,3 +79,4 @@ In the virtual director (pipenv shell) run:
 ```pipenv install djangorestframework```
 and add to the INSTALLED_APPS section of the settings.py folder. 
 
+### CORS

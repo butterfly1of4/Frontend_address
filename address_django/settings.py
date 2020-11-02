@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'address',
     # 'AIzaSyD--your-google-maps-key-SjQBE',
     'phone_field',
-    'rest_framework'
+    'rest_framework',
+    # 'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -53,6 +54,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # 'corsheaders.middleware.CorsMiddleware',
+    # 'django.middleware.common.CommonMiddlewear'
 ]
 
 ROOT_URLCONF = 'address_django.urls'
